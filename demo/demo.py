@@ -50,6 +50,7 @@ def do_test(args, cfg, model):
 
     metadata = util.load_json(category_path)
     cats = metadata['thing_classes']
+    cats = ['camera', 'propeller', 'frame', 'body', 'bridge']
     print("categories :", cats)
 
     for path in list_of_ims:
