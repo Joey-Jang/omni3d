@@ -12,7 +12,7 @@ from detectron2.config import get_cfg
 from detectron2.engine import default_argument_parser, default_setup, launch
 from detectron2.data import transforms as T
 
-logger = logging.getLogger("detectron2")
+# logger = logging.getLogger("detectron2")
 
 sys.dont_write_bytecode = True
 sys.path.append(os.getcwd())
@@ -152,7 +152,7 @@ def main(args):
     cfg = setup(args)
     model = build_model(cfg)
 
-    logger.info("Model:\n{}".format(model))
+    # logger.info("Model:\n{}".format(model))
     DetectionCheckpointer(model, save_dir=cfg.OUTPUT_DIR).resume_or_load(
         cfg.MODEL.WEIGHTS, resume=True
     )
